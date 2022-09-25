@@ -1,7 +1,12 @@
 /* CSS Variables (page, global) to simplify changes */
 :root {
-    --background-color: #0e3d06;
+    /* --background-color: #0e3d06; */
+    --background-color:#111;
     --font-color: #fff;
+    --input-background-color: #fff;
+    --devname-font-color: red;
+    --sidenav-width: 160px;
+    --main-width: 1.2 * var(--sidenav-width);
 }
 
 body * {
@@ -9,11 +14,58 @@ body * {
     color: var(--font-color);
 }
 
+#devname {
+    color: var(--devname-font-color);
+}
+/* Control size of dev's portrait */
 img[id="my-picture"] {
     width: 200px
+}
+/* Control styling of side navigation bar */
+.sidenav {
+    height: 100%; /* 100% of viewport height*/
+    width:var(--sidenav-width); /* width of nav bar*/
+    position: fixed; /* prevent movement while scrolling */
+    z-index: 1; /* keep side nav in front */
+    top: 0;  /* fix to top of viewport */
+    left: 0; /* fix to left side of viewport */
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+/* Size Main section so it's not overlapped by sidenav */
+main {
+    /* Margin start is same as sidenav width */
+    margin-left: var(--sidenav-width); 
+    padding: 0px 10px;
 }
 
 #contact-form {
     display: flex;
     flex-direction: column;
 }
+
+input {
+    background-color:var(--input-background-color);
+}
+
+/* Media Queries for responsive design */
+
+/* Controls placement of navigation bar as screen size decreases */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
