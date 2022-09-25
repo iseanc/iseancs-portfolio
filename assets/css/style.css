@@ -1,0 +1,19 @@
+/* CSS Variables (page, global) to simplify changes */
+:root {
+    --background-color: #0e3d06;
+    --font-color: #fff;
+}
+
+body * {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+img[id="my-picture"] {
+    width: 200px
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
