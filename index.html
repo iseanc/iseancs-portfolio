@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+ <!-- Metadata -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,73 +9,89 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+<!-- HTML body -->
 <body>
-    <header>
-        
-    </header>
+    <header></header>
+    <!-- Navigation bar. To display on viewport left -->
     <nav class="sidenav">
-        <h1>I'm</h1>
-        <h1 id="devname">Sean Collins,</h1>
-        <h1>Web Developer</h1>
+        <!-- Intro header in Nav bar area -->
+        <h1>I'm</br><span id="devname">Sean...</span></br>I Do Web Development!</h1>
+        <!-- My picture -->
         <img src="./assets/images/20211202_MeCrop.webp" id="my-picture" alt="picture of Sean Collins">
+        <!-- Table of page navigation links -->
         <ul>
             <li><a href="#about-me">About Me</a></li>
             <li><a href="#my-projects">My Projects</a></li>
             <li><a href="#contact-me">Contact Me</a></li>
         </ul>
-    </nav>
-    <main>
-        <section id="about-me" class="about-me">
-            <h2>About Me</h2>
-            <h3>I'm <strong>Sean Collins</strong></h3>
-            <p>I've been in IT and the software industry since I started in 1996 with Microsoft Technical Support for MS Windows.  In that time I've spent held a number of rolls, as support technician, technical mentor, team lead, manager, enterprise support contact, system administrator and business process/project implementation specialist.</p>
-            <br>
-            <p>Most recently, I decided to plunge into web-development and coding, to satisfy a desire I've had for a long while.</p>
-            <br>
-            <p>I'm happy to be married to a wonderful wife, and we have have one beautiful daughter.  We currently live in the (mildly) harsh Sonoran Desert in Tucson, Arizona.</p>
+        <section id="social-media">
             <ul class="social-media">
                 <li><a href="www.linkedin.com/in/iseanc">LI</a></li>
                 <li><a href="https://github.com/iseanc">GH</a></li>
                 <li><a href="https://www.facebook.com/sean.collins.7906">FB</a></li>
             </ul>
         </section>
+    </nav>
+    <!-- Primary page content -->
+    <main>
+        <!-- Biographical info -->
+        <section id="about-me" class="about-me">
+            <h2>About Me</h2>
+            
+            <p>I've been in IT and the software industry since I started in 1996 with Microsoft Technical Support for MS Windows.  In that time I've spent held a number of rolls, as support technician, technical mentor, team lead, manager, enterprise support contact, system administrator and business process/project implementation specialist.</p>
+            <br>
+            <p>Most recently, I decided to plunge into web-development and coding, to satisfy a desire I've had for a long while.</p>
+            <br>
+            <p>I'm happy to be married to a wonderful wife, and we have have one beautiful daughter.  We currently live in the (mildly) harsh Sonoran Desert in Tucson, Arizona.</p>
+            <!-- My Social Media links -->
+        </section>
+        <!-- My portfolio links -->
         <section  id="my-projects" class="my-projects">
             <h2>My Projects</h2>
-            <figure>
-                <a href="https://iseanc.github.io/prework-study-guide/">
-                     <figcaption>Boot Camp Pre-work Study Guide</figcaption>
-                    <img src="./assets/images/prework-study-guide.png">
-                </a>
-            </figure>
-            <figure>
-                <a href="https://iseanc.github.io/demo-css-cheatsheet/">
-                    <figcaption>CSS Snippet Cheat Sheet</figcaption>
-                    <img src="./assets/images/css-snippets.png">
-                </a>
-            </figure>
-            <figure>
-                <a href="https://iseanc.github.io/webdev-bootcamp-concepts/">
-                    <figcaption>Web Dev Concepts in Practice</figcaption>
-                    <img src="./assets/images/webdev-concepts-week1.png">
-                </a>
-            </figure>
-            <figure>
-                <a href="https://iseanc.github.io/challenge-m1-accessibility/">
-                    <figcaption>Module 1 - Accessibility Challenge</figcaption>
-                    <img src="./assets/images/accessibility-challenge.png">
-                </a>
-            </figure>
+            <section class="project-main">
+                <figure class="project-1">
+                    <a href="https://iseanc.github.io/demo-css-cheatsheet/">
+                        <figcaption>CSS Snippet Cheat Sheet</figcaption>
+                        <img src="./assets/images/css-snippets.png">
+                    </a>
+                </figure>
+            </section>
+            <section class="project-other">
+                <figure>
+                    <a href="https://iseanc.github.io/challenge-m1-accessibility/">
+                        <figcaption>Module 1 - Accessibility Challenge</figcaption>
+                        <img src="./assets/images/accessibility-challenge.png">
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://iseanc.github.io/webdev-bootcamp-concepts/">
+                        <figcaption>Web Dev Concepts in Practice</figcaption>
+                        <img src="./assets/images/webdev-concepts-week1.png">
+                    </a>
+                </figure>
+                <figure>
+                    <a href="https://iseanc.github.io/prework-study-guide/">
+                        <figcaption>Boot Camp Pre-work Study Guide</figcaption>
+                        <img src="./assets/images/prework-study-guide.png">
+                    </a>
+                </figure>
+            </section>
         </section>
+        <!-- Contact form -->
         <section  id="contact-me" class="contact-me">
             <h2>Contact Me</h2>
             <form id="contact-form">
                 <label for="name">Name: </label><input name="name" type="name">
                 <label for="email">Email: </label><input name="email" type="email">
                 <label for="phone">Telephone: </label><input name="phone" type="telephone">
-                <label for="message">Message</label><input name="message" type="text">
+                <label for="message">Message</label><input name="message" class="message" type="text">
+                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
             </form>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <!-- For padding @ bottom of page -->
+        <div class="footer"></div>
+    </footer>
 </body>
 </html>
