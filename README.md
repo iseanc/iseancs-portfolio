@@ -14,59 +14,33 @@ The web page provides
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Portfolio](#portfolio)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Features](#features)
 - [Credits](#credits)
 - [License](#license)
 
 ## Portfolio
 
-[Go to my portfolio]()
+[Go to my portfolio](https://iseanc.github.io/iseancs-portfolio/)
 
-## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+![Portfolio Page Top](./assets/images/m2-portfolio-main.png)
 
-## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+![Portfolio Page Bottom](./assets/images/m2-portfolio-bottom.png)
 
 ## Features
 
-If your project has a lot of features, list them here.
+- Side navigation bar
+- Clickable navigation links for About Me, Portfolio, and Contact form.
+- Clickable project previews navigate to my body of work samples.
+- Clickable links to my social media pages.
+- Page components resize and rearrange as viewport dimensions change.
+- Semantic HTML elements.
 
-## How to Contribute
+## Credits
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+Made by me with extensive reference to sites like [W3Schools](https://www.w3schools.com/), [MDN](https://developer.mozilla.org/) and various other tutorials on the internet.
 
-## Tests
+## License
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+https://img.shields.io/github/license/iseanc/iseancs-portfolio
+
