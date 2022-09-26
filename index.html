@@ -80,11 +80,11 @@
         <!-- Contact form -->
         <section  id="contact-me" class="contact-me">
             <h2>Contact Me</h2>
-            <form id="contact-form">
+            <form id="contact-form" action="/form/submit" method="post">
                 <label for="name">Name: </label><input name="name" type="name">
                 <label for="email">Email: </label><input name="email" type="email">
                 <label for="phone">Telephone: </label><input name="phone" type="telephone">
-                <label for="message">Message</label><input name="message" class="message" type="text">
+                <label for="message">Message</label><textarea name="message" class="message" type="text"></textarea>
                 <button type="submit" id="submit" class="btn btn-primary">Submit</button>
             </form>
         </section>
