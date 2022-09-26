@@ -1,26 +1,38 @@
 /* CSS Variables (page, global) to simplify changes */
 :root {
-    /* --background-color: #0e3d06; */
     --background-color:#111;
     --font-color: #fff;
+    --nav-link-color: #818181;
     --input-background-color: #fff;
-    --devname-font-color: red;
-    --sidenav-width: 160px;
-    --main-width: 1.2 * var(--sidenav-width);
+    --active-background-color: #555;
+    --devname-color: red;
+    --devname-size: 50px;
+    --sidenav-width: 20%; 
+    --margin-h1: 10px;
+    --margin-h2:20px 0;
+    --font-size: 14px;
 }
 
 body * {
     background-color: var(--background-color);
     color: var(--font-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: var(--margin-h1);
+}
+
+h2 {
+    font-size: 30px;
+    margin:var(--margin-h2);
 }
 
 #devname {
-    color: var(--devname-font-color);
+    color: var(--devname-color);
+    font-size: var(--devname-size);
 }
-/* Control size of dev's portrait */
-img[id="my-picture"] {
-    width: 200px
-}
+
 /* Control styling of side navigation bar */
 .sidenav {
     height: 100%; /* 100% of viewport height*/
@@ -29,43 +41,144 @@ img[id="my-picture"] {
     z-index: 1; /* keep side nav in front */
     top: 0;  /* fix to top of viewport */
     left: 0; /* fix to left side of viewport */
-    background-color: #111;
+    background-color: var(--background-color);
     overflow-x: hidden;
-    padding-top: 20px;
-  }
-  
+}
+
+img {
+
+    max-width: 100%;
+}
+
+/* Appearance of navigation menu links */
 .sidenav a {
-    padding: 6px 8px 6px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 6px 6px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
-    color: #818181;
+    font-size: var(--font-size);
+    color: var(--nav-link-color);
     display: block;
   }
   
+/* Appearance of nav links on hover and mouse-over */
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: var(--font-color);
   }
+
+.sidenav a:active {
+    background-color: var(--active-background-color);
+    color: var(--font-color);
+}
+
+/* Social Media links in side-nav */
+#social-media {
+    border: 1px dotted var(--nav-link-color);
+    margin: 5px;
+}
+
+#social-media li {
+    display: inline-flex; 
+    color: var(--nav-link-color);
+}
 
 /* Size Main section so it's not overlapped by sidenav */
 main {
-    /* Margin start is same as sidenav width */
-    margin-left: var(--sidenav-width); 
-    padding: 0px 10px;
+
+    /* Margin start is same as sidenav width plus .5px for a line*/
+    margin-left: calc(var(--sidenav-width) + 0.5px);
+    padding: 25px 10px;
 }
 
+.about-me p {
+    padding: 0 30px 0 30px;
+}
+
+.project-other {
+    display:flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+
+}
+
+.project-other figure, .project-main figure {
+    border: .5px dotted var(--nav-link-color);
+    padding: 5px;
+}
+
+.project-other figure {
+    width: 33%;
+    margin:0;
+    justify-content:flex-start;
+}
+
+.project-other figure img {
+    width:100%;
+}
+
+/* Form styling */
 #contact-form {
     display: flex;
     flex-direction: column;
+    max-width: 50%;
+}
+
+#contact-form .message {
+    height: 20px;
+}
+
+button {
+    background-color: var(--active-background-color);
+    margin: 10px 0;
+    max-width: 100px;
 }
 
 input {
     background-color:var(--input-background-color);
 }
 
+.footer {
+    height: 50px;
+}
+
 /* Media Queries for responsive design */
 
 /* Controls placement of navigation bar as screen size decreases */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+
+/* At 992px breakpoint, max 2 project figures per row */
+@media screen and (max-width: 992px) {
+    .project-other figure {
+        width:50%;
+    }
+}
+
+/* On screens that are less than 768px wide */
+@media screen and (max-width: 768px) {
+    /* Show project-other figures as a column, centered, width=75% ensures they stay smaller than the project-main figure */
+    .project-other {
+        margin: auto;
+        display:flex;
+        flex-direction: column;
+        /* Center the section in the parent */
+        justify-content: center;
+        /* center the project figures in the parent box */
+        align-items: center;
+    }
+
+    /* Make the sidebar into a top bar */
+    .sidenav {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display:block;
+    }
+
+    .sidenav #my-picture {
+        max-width: 200px;
+    }
+
+    .sidenav a {float: left;}
+    main {margin-left: 0;}
+
   }
