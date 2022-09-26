@@ -98,8 +98,6 @@ main {
 .project-other {
     display:flex;
     flex-wrap: wrap;
-    /* justify-content: space-evenly; */
-
 }
 
 .project-other figure, .project-main figure {
@@ -118,15 +116,31 @@ main {
 }
 
 /* Form styling */
-#contact-form {
-    display: flex;
-    flex-direction: column;
+#contact-me {
+    /* Center form on page */
+    margin:0 auto;
+    /* form max width 50% of containing block */
     max-width: 50%;
+    border: 1px solid white;
 }
 
-#contact-form .message {
-    height: 20px;
+/* Stack form fields on each other*/
+#contact-form {
+    display:flex;
+    flex-direction: column;
+} 
+
+input {
+    background-color:var(--input-background-color);
 }
+
+textarea {
+    background-color:var(--input-background-color);
+    /* Max text message input 100% form width and min 200px tall */
+    min-height:200px;
+    width:100%;
+}
+
 
 button {
     background-color: var(--active-background-color);
@@ -134,14 +148,11 @@ button {
     max-width: 100px;
 }
 
-input {
-    background-color:var(--input-background-color);
-}
-
 .footer {
+    /* padding at bottom of page */
     height: 50px;
+    
 }
-
 /* Media Queries for responsive design */
 
 /* Controls placement of navigation bar as screen size decreases */
@@ -163,6 +174,13 @@ input {
         /* Center the section in the parent */
         justify-content: center;
         /* center the project figures in the parent box */
+        align-items: center;
+        width:100%;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        justify-content: center;
         align-items: center;
     }
 
