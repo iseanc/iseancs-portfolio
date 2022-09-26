@@ -11,6 +11,7 @@
     --margin-h1: 10px;
     --margin-h2:20px 0;
     --font-size: 14px;
+    --h2-font-size:200%;
 }
 
 body * {
@@ -24,8 +25,14 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: var(--h2-font-size);
     margin:var(--margin-h2);
+}
+
+/* Allow images to be 100% or width of containing block */
+img {
+
+    max-width: 100%;
 }
 
 #devname {
@@ -45,10 +52,6 @@ h2 {
     overflow-x: hidden;
 }
 
-img {
-
-    max-width: 100%;
-}
 
 /* Appearance of navigation menu links */
 .sidenav a {
@@ -151,7 +154,7 @@ button {
 .footer {
     /* padding at bottom of page */
     height: 50px;
-    
+
 }
 /* Media Queries for responsive design */
 
